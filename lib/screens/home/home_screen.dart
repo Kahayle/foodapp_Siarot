@@ -7,6 +7,42 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            centerTitle: true,
+            title: Column(
+              children: [
+                Text(
+                  "Delivery to".toUpperCase(),
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodySmall!
+                      .copyWith(color: kActiveColor),
+                
+                ),
+                const Text(
+                  "San Francisco",
+                  style: TextStyle(color: Colors.black),
+                ),
+              ],
+            ),
+            actions: [
+              TextButton(
+                onPressed: () {},
+                child: const Text(
+                  "Filter",
+                  style: TextStyle(color: Colors.black),
+                ),
+              )
+            ],
+          ),
+         
+        ],
+      ),
+    );
   }
 }

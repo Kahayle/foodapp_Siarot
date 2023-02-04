@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodapp/constants.dart';
-import 'package:foodapp/demoData.dart';
+import 'package:foodapp/screens/home/Components/Image_carousel.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -40,9 +40,17 @@ class HomeScreen extends StatelessWidget {
               )
             ],
           ),
-         
+           const SliverPadding(
+             padding: EdgeInsets.symmetric(horizontal: defaultPadding),
+             sliver: SliverToBoxAdapter(
+              child: ImageCarousel(),
+                     ),
+           ),
+           
         ],
       ),
     );
   }
 }
+
+
